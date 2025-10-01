@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Popins:wght@400;600&display=swap');
 
 :root {
-    --cor-fundo: #BABABA;
+    --cor-fundo: #D7D2CB;
     --cor-container: #ffffff;
-    --cor-primaria: #007bff;
+    --cor-primaria: #a32742;
     --cor-texto-principal: #333333;
     --cor-texto-secundario: #6c757d;
-    --cor-borda: #d332e6;
+    --cor-borda: #920404;
     --fonte-principal: 'Popins', sans-serif;
 }
 
@@ -50,11 +50,54 @@ h1 {
 .subtitulo {
     color: var(--cor-texto-secundario);
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* Comentário */
 
 input, button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+    font-family: var(--fonte-principal);
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    transition: all 0.3s ease;
 
+}
+
+input:focus{
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+
+}
+
+button{
+    cursor: pointer;
+    font-weight: 600;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    margin: 10px 0;
+
+}
+
+button:hover{
+    opacity: 0.85;
+}
+
+#resultado{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    min-height: 25px;
+    color: var(--cor-primaria);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#resultado.visível{
+    opacity: 1;
 }
